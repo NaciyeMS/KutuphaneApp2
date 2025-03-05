@@ -6,17 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="200.0" prefWidth="400.0" 
-xmlns:fx="http://javafx.com/fxml/1"
- xmlns="http://javafx.com/javafx/23.0.1" 
- fx:controller="application.KullaniciGirisController">
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KullaniciGirisController">
    <children>
       <Label layoutX="97.0" layoutY="53.0" text="Email" />
       <Label layoutX="99.0" layoutY="88.0" text="Şifre" />
       <TextField fx:id="email_tf" layoutX="153.0" layoutY="49.0" />
       <PasswordField fx:id="sifre_pf" layoutX="154.0" layoutY="84.0" />
-      <Button fx:id="girisButton" layoutX="183.0" layoutY="124.0" 
-      mnemonicParsing="false" onAction="#girisButton_click" text="Giriş" />
+      <Button fx:id="girisButton" layoutX="183.0" layoutY="124.0" mnemonicParsing="false" onAction="#girisButton_click" text="Giriş" />
    </children>
 </AnchorPane>

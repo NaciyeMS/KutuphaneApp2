@@ -39,36 +39,32 @@ public class KullaniciGirisController {
 
     @FXML
     void girisButton_click(ActionEvent event) {
-    	try {
-    		 
+    	try {    		 
 	        vt.baglan();
 	        String email = email_tf.getText().trim();
-	        String sifre = sifre_pf.getText().trim(); 
-	       
+	        String sifre = sifre_pf.getText().trim(); 	       
 	        String sorgu = "SELECT * FROM kullanicilar WHERE email=? AND sifre=?";
 	        ps = vt.baglanti.prepareStatement(sorgu);
 	        ps.setString(1, email);
-	        ps.setString(2, sifre);
-	        
+	        ps.setString(2, sifre);	        
 	        rs = ps.executeQuery();
-
 	        if (rs.next()) {
-	            JOptionPane.showMessageDialog(null, "Başarılı giriş!");
-	            //KullaniciPanel kodlarını çalıştırmam gerekiyor 
+	            JOptionPane.showMessageDialog(null, "Başarılı giriş!");   
+	            //diğer sayfaya yönlendirme işlemini yapmamız lazım 
 	            FXMLLoader loader =new FXMLLoader(getClass().getResource("KullaniciPanel.fxml"));
-	            Parent root = loader.load();
-	            Stage stage = new Stage();
-	            stage.setTitle("Kullanici Paneli");
+	            Parent root=loader.load();
+	            Stage stage=new Stage();
+	            stage.setTitle("Kullanıcı Paneli");
 	            stage.setScene(new Scene(root));
 	            stage.show();
-	            ((Stage) girisButton.getScene().getWindow()).close();
-	          
+	            ((Stage)girisButton.getScene().getWindow()).close();
 	        } else {
 	            JOptionPane.showMessageDialog(null, "Kullanıcı bulunamadı!");
 	        }
 	        rs.close();
 	        ps.close();
 	        vt.kapat();
+	        
     	}catch (Exception e) {
     		JOptionPane.showMessageDialog(null, e);
 		}

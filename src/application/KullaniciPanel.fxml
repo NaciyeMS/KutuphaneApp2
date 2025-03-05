@@ -3,9 +3,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" 
-xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KullaniciPanelController">
+<AnchorPane prefHeight="200.0" prefWidth="400.0"
+ xmlns="http://javafx.com/javafx/23.0.1" 
+ xmlns:fx="http://javafx.com/fxml/1" 
+ fx:controller="application.KullaniciPanelController">
    <children>
-      <Label layoutX="140.0" layoutY="62.0" text="Kullanıcı Paneline Hoşgeldiniz" />
+      <Label layoutX="99.0" layoutY="88.0" text="bu sayfa Kullanıcı panel sayfası " />
    </children>
 </AnchorPane>
