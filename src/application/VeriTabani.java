@@ -13,7 +13,7 @@ public class VeriTabani {
 		 //sizde port ne ise onu kullanmalısınız
 		try
 		{
-			 Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			 baglanti = DriverManager.getConnection(url,kullaniciadi,kullanicisifresi);		 
 			
 		}catch(Exception hata)
